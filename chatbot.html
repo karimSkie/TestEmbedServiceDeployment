@@ -1,0 +1,60 @@
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+<body>
+   
+   <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+      <input type=hidden name="oid" value="00D5g000002IX7H">
+      <input type=hidden name="retURL" value="http://">
+      <!--  ----------------------------------------------------------------------  -->
+      <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+      <!--  these lines if you wish to test in debug mode.                          -->
+      <!--  <input type="hidden" name="debug" value=1>                              -->
+      <!--  <input type="hidden" name="debugEmail"                                  -->
+      <!--  value="salesforce@skie.com.au">                                         -->
+      <!--  ----------------------------------------------------------------------  -->
+      <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+      <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+      <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+      <label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+      <label for="salutation">Salutation</label>
+      <select  id="salutation" name="salutation">
+         <option value="">--None--</option>
+         <option value="Mr.">Mr.</option>
+         <option value="Ms.">Ms.</option>
+         <option value="Mrs.">Mrs.</option>
+         <option value="Dr.">Dr.</option>
+         <option value="Prof.">Prof.</option>
+      </select>
+      <br>
+      <label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+      <input type="submit" name="submit">
+   </form>
+   <script type='text/javascript'>
+      function initEmbeddedMessaging() {
+         try {
+            embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+   
+            embeddedservice_bootstrap.init(
+               '00DMn00000151m5',
+               'PSD_Website',
+               'https://pacificsmiles.my.site.com/ESWPSDWebsite1733457259617',
+               {
+                  scrt2URL: 'https://pacificsmiles.my.salesforce-scrt.com'
+               }
+            );
+         } catch (err) {
+            console.error('Error loading Embedded Messaging: ', err);
+         }
+      };
+   </script>
+   <script type='text/javascript' src='https://pacificsmiles.my.site.com/ESWPSDWebsite1733457259617/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+   
+</body>
