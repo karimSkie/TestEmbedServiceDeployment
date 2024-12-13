@@ -41,7 +41,10 @@
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-
+			window.addEventListener("OnEmbeddedMessagingReady", () => {
+				console.log("this is the customer pre chat code");
+				embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Customer_IP_Address","1.2.3.4"}); 
+			});
 			embeddedservice_bootstrap.init(
 				'00DMn00000151m5',
 				'PSD_Website',
