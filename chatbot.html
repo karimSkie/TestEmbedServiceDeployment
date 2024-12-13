@@ -51,11 +51,11 @@ function initEmbeddedMessaging() {
 try {
 embeddedservice_bootstrap.settings.language = 'en_AU';
 
-window.addEventListener("onEmbeddedMessagingReady", () => { 
-console.log("Received the onEmbeddedMessagingReady event…"); 
-// Send data to Salesforce 
+window.addEventListener("onEmbeddedMessagingReady", () => {
+console.log("Received the onEmbeddedMessagingReady event…");
+// Send data to Salesforce
 embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
-"TreatmentType" : "crowns", //Value specific to the webpage the code is embedded one
+"TreatmentType" : "full-dentures", //Value specific to the webpage the code is embedded on
 "Customer_IP_Address" : "1.2.3.4" //Testing placeholder
 });
 embeddedservice_bootstrap.init(
